@@ -28,6 +28,8 @@ wheels/
 venv/
 ENV/
 env/
+**/venv/
+**/__pycache__/
 
 # IDE
 .vscode/
@@ -55,3 +57,4 @@ Thumbs.db
 
 # Logs
 *.log
+.vercel
