@@ -48,8 +48,9 @@ env/
 backend/csv/
 
 # Frontend
-frontend/node_modules/
-frontend/dist/
+nextjs/node_modules/
+nextjs/.next/
+nextjs/out/
 
 # OS
 .DS_Store
