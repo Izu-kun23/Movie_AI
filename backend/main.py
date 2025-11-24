@@ -5,6 +5,7 @@ from model import MovieRecommendationModel
 from typing import Optional
 import uvicorn
 import random
+import pandas as pd
 
 # Initialize FastAPI app
 app = FastAPI(
