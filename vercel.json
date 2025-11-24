@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/index.py": {
-      "includeFiles": [
-        "backend/main.py",
-        "backend/model.py",
-        "backend/movies.csv",
-        "backend/__init__.py"
-      ],
-      "excludeFiles": [
-        "venv/**",
-        "backend/csv/**",
-        "**/__pycache__/**",
-        "**/*.pyc"
-      ]
-    }
-  },
   "builds": [
     {
       "src": "api/index.py",
