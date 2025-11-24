@@ -41,7 +41,8 @@ env/
 .env.local
 
 # Movie dataset (can be large)
-backend/movies.csv
+# Note: backend/movies.csv is committed for deployment (small file)
+# backend/movies.csv
 backend/csv/
 
 # Frontend

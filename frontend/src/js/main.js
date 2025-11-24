@@ -1,5 +1,8 @@
 // API Configuration
-const API_BASE_URL = 'http://127.0.0.1:8000';
+// Automatically use same origin in production, localhost in development
+const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://127.0.0.1:8000'
+    : ''; // Empty string = same origin (production)
 
 // DOM Elements
 const chatMessages = document.getElementById('chatMessages');

@@ -6,7 +6,8 @@
     "build:css": "sass src/scss/main.scss dist/css/main.css",
     "watch:css": "sass --watch src/scss/main.scss dist/css/main.css",
     "build": "npm run build:css && cp src/js/main.js dist/js/main.js",
-    "dev": "npm run watch:css"
+    "dev": "npm run watch:css",
+    "vercel-build": "npm run build"
   },
   "keywords": [
     "movie",
@@ -17,4 +18,3 @@
     "sass": "^1.69.5"
   }
 }
-
