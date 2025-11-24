@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation AI</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__content">
+                <h1 class="header__title">
+                    <span class="header__icon">🤖</span>
+                    Movie AI Assistant
+                </h1>
+                <p class="header__subtitle">Your intelligent movie recommendation companion</p>
+            </div>
+        </header>
+
+        <!-- Chat Interface -->
+        <main class="main">
+            <div class="chat-container">
+                <!-- Chat Messages -->
+                <div id="chatMessages" class="chat-messages">
+                    <div class="message message--ai">
+                        <div class="message__avatar">🤖</div>
+                        <div class="message__content">
+                            <p>Hello! I'm your AI movie recommendation assistant. Tell me a movie you like, and I'll find similar ones for you! 🎬</p>
+                            <span class="message__time">Just now</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <input 
+                            type="text" 
+                            id="chatInput" 
+                            class="chat-input" 
+                            placeholder="Try: 'I like The Matrix' or 'Recommend movies similar to Inception'"
+                            autocomplete="off"
+                        >
+                        <button id="sendBtn" class="chat-send-btn">
+                            <span class="chat-send-icon">✨</span>
+                        </button>
+                    </div>
+                    <div class="chat-suggestions">
+                        <button class="suggestion-btn" data-message="I like The Matrix">🎬 The Matrix</button>
+                        <button class="suggestion-btn" data-message="Recommend something like Inception">🌌 Inception</button>
+                        <button class="suggestion-btn" data-message="Find movies similar to Blade Runner">🔮 Blade Runner</button>
+                    </div>
+                </div>
+
+                <!-- Typing Indicator -->
+                <div id="typingIndicator" class="typing-indicator hidden">
+                    <div class="message message--ai">
+                        <div class="message__avatar">🤖</div>
+                        <div class="message__content">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by AI • FastAPI & Scikit-learn</p>
+        </footer>
+    </div>
+
+    <script src="dist/js/main.js"></script>
+</body>
+</html>

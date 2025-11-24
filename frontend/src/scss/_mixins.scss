@@ -1,0 +1,87 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin card {
+    background: $card-background;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+    transition: all $transition-base;
+}
+
+@mixin button {
+    padding: $spacing-md $spacing-xl;
+    border: none;
+    border-radius: $border-radius-md;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: all $transition-base;
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-sm;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+@mixin input {
+    width: 100%;
+    padding: $spacing-md;
+    background: $background-light;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-md;
+    color: $text-primary;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    transition: all $transition-base;
+    
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+    
+    &::placeholder {
+        color: $text-muted;
+    }
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (min-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+}
+
