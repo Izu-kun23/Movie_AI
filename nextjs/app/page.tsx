@@ -220,7 +220,7 @@ function Message({ text, sender, recommendations, movies, onRecommendClick }: {
             ))}
           </div>
         )}
-        <span className="message__time">{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+        <MessageTime />
       </div>
       {sender === 'user' && <div className="message__avatar">👤</div>}
     </div>
@@ -283,6 +283,16 @@ function SearchResultItem({ movie, onRecommendClick }: { movie: Movie; onRecomme
       </div>
     </div>
   );
+}
+
+function MessageTime() {
+  const [time, setTime] = useState('');
+  
+  useEffect(() => {
+    setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+  }, []);
+  
+  return <span className="message__time">{time || '--:--'}</span>;
 }
 
 function TypingIndicator() {
